@@ -40,7 +40,7 @@ The model maps 4 atoms to 1 CG bead and assigns a bead type based on oxidation t
    - Type 1 - Type 1: lj/cut, $\varepsilon$ = 0.204 kcal/mol, $\sigma$ = 7.48 &#197;
    - Type 2 - Type 2: lj/cut, $\varepsilon$ = 1.024 kcal/mol, $\sigma$ = 7.48 &#197;
    - Type 3 - Type 3: lj/cut, $\varepsilon$ = 0.638 kcal/mol, $\sigma$ = 7.48 &#197;
-   - Type 4 - Type 4: lj/charmm/coul/charmm, 
+   - Type 4 - Type 4: lj/charmm/coul/charmm, $\varepsilon$ = 0.813 kcal/mol, $\sigma$ = 3.46 A
    - Cross interactions are described by Lorentz-Berthelot mixing rules using the LAMMPS command  [pair_modify mix arithmetic](https://docs.lammps.org/pair_modify.html)
  - NOTE: Type 4 is not necessary for equilibration, but needs to be used for the projectile in the _lipit.in_ input script
 
