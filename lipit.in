@@ -63,7 +63,7 @@ variable my_bullet_center equal ${bullet_center}
 
 ##ballistic setup-bullet
 change_box all z delta -${my_zlo_delta} ${my_zhi_delta} units box
-variable vel equal -0.010  #BULLET VELOCITY
+variable vel equal -0.010  #BULLET VELOCITY (0.01 A/fs = 1000 m/s)
 lattice diamond 7.2 
 region 1 sphere 0 0 v_my_bullet_center v_rbullet side in units box 
 create_atoms 4 region 1 units box
