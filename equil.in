@@ -3,6 +3,7 @@
 # LAMMPS version 3Mar20
 # NOTE: for newer LAMMPS versions, the "delete_bonds all bond 0 special"
 #       may crash the simulation and shoould be removed
+# Needs folder “equil_data” to run
 
 dimension	3
 boundary	p p s
