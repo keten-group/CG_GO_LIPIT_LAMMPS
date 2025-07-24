@@ -71,3 +71,6 @@ The below image demonstrates how the number of units is counted in each directio
 2) H. L. White, A. Giuntoli, M. Fermen-Coker, and S. Keten, “Tailoring flake size and chemistry to improve impact resistance of graphene  oxide thin films,” Carbon, vol. 215, p. 118382, Nov. 2023,  doi: 10.1016/j.carbon.2023.118382.
 3) T. Li, Z. Meng, and S. Keten, “Interfacial mechanics and viscoelastic properties of patchy graphene oxide reinforced nanocomposites,” Carbon, vol. 158, pp. 303–313, Mar. 2020, doi: 10.1016/j.carbon.2019.10.039.
 4) Z. Meng et al., “A coarse-grained model for the mechanical behavior of graphene oxide,” Carbon, vol. 117, pp. 476–487, June 2017, doi: 10.1016/j.carbon.2017.02.061.
+
+
+For questions not answered by the provided materials, please contact the Keten Lab (https://keten-group.northwestern.edu/).
