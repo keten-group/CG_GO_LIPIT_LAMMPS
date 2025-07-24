@@ -1,0 +1,80 @@
+# Keten Research Group at Northwestern University
+# GO equilibration
+# LAMMPS version 3Mar20
+# NOTE: for newer LAMMPS versions, the "delete_bonds all bond 0 special"
+#       may crash the simulation and shoould be removed
+
+dimension	3
+boundary	p p s
+units		real
+atom_style	full
+timestep	4.0
+
+read_data	initial.data
+
+bond_style hybrid morse table linear 20000
+bond_coeff 1 morse 443.07 1.154 2.86
+bond_coeff 2 table bond2-GO.table GO
+bond_coeff 3 table bond3-GO.table GO
+
+angle_style harmonic
+angle_coeff  1 456.61 120
+angle_coeff  2 259.47 120
+angle_coeff  3 189.93 120
+
+##############
+### Groups ###
+##############
+group 1 molecule 1
+group 2 molecule 2
+
+##############
+### Output ###
+##############
+thermo		    500
+thermo_style 	custom step temp pxx pyy pzz ebond eangle epair edihed pe etotal lx ly lz vol density
+
+########################################################
+### Turn on all the Potential and boundary condition ###
+########################################################
+pair_style lj/cut 20
+pair_modify mix arithmetic
+pair_coeff 1 1 0.204 7.48
+pair_coeff 2 2 1.024 7.48
+pair_coeff 3 3 0.638 7.48
+
+#####################
+### Equilibration ###
+#####################
+
+minimize 1.0e-4 1.0e-6 10000 10000
+velocity  all create 10 6384523
+velocity  all zero linear
+
+fix noRotation all momentum 100 linear 1 1 1 angular  #remove drift or rotation
+
+variable        ts equal "step"
+variable        pressX equal "-pxx"
+variable        totalvol equal "vol"
+variable        potE equal "pe"
+
+fix 61 all nvt temp 10 10 400
+run 10000
+unfix 61 
+
+fix 61 all npt temp 10 10 400 x 0. 0. 4000 y 0. 0. 4000
+run 10000
+unfix 61 
+
+fix 61 all nvt temp 10 10 400 
+
+special_bonds   charmm 
+delete_bonds all bond 0 special 
+fix             10 all bond/break 5 3 4.3
+fix             11 all bond/break 5 1 3.7
+fix             12 all bond/break 5 2 3.5
+
+run 120000
+write_data equil.data
+
+print "All Done"
