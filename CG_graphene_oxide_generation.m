@@ -11,10 +11,10 @@
 % Please cite the below publications if this script contributes to 
 % your publication.
 %
-% 1) UNDER REVIEW H. L. White, W. Chen, N. M. Pugno, and S. Keten, 
-%    “Rate-dependent molecular size effects govern the inverse thickness 
-%    dependence of specific penetration energy in nanoscale thin films,” 
-%    Extreme Mechanics Letters, vol. 81, p. 102419, Dec. 2025, 
+% 1) H. L. White, W. Chen, N. M. Pugno, and S. Keten, “Rate-dependent 
+%    molecular size effects govern the inverse thickness dependence of 
+%    specific penetration energy in nanoscale thin films,” Extreme 
+%    Mechanics Letters, vol. 81, p. 102419, Dec. 2025, 
 %    doi: 10.1016/j.eml.2025.102419.
 % 2) H. L. White, A. Giuntoli, M. Fermen-Coker, and S. Keten, “Tailoring 
 %    flake size and chemistry to improve impact resistance of graphene 
